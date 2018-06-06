@@ -22,6 +22,9 @@ public class TokenHolder extends BinderViewHolder<Token> implements View.OnClick
     private Token token;
     private OnTokenClickListener onTokenClickListener;
 
+    public static final String DEFAULT_ADDRESS_ADDITIONAL = "default_address";
+    public static final String DEFAULT_SYMBOL_ADDITIONAL = "network_symbol";
+
     public TokenHolder(int resId, ViewGroup parent) {
         super(resId, parent);
 

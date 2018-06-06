@@ -10,6 +10,8 @@ import com.wallet.crypto.trustapp.entity.Wallet;
 import com.wallet.crypto.trustapp.interact.FetchTokensInteract;
 import com.wallet.crypto.trustapp.interact.FindDefaultNetworkInteract;
 import com.wallet.crypto.trustapp.router.AddTokenRouter;
+import com.wallet.crypto.trustapp.router.MyAddressRouter;
+import com.wallet.crypto.trustapp.router.SendRouter;
 import com.wallet.crypto.trustapp.router.SendTokenRouter;
 import com.wallet.crypto.trustapp.router.TransactionsRouter;
 import com.wallet.crypto.trustapp.ui.TokensActivity;
@@ -25,17 +27,26 @@ public class TokensViewModel extends BaseViewModel {
     private final SendTokenRouter sendTokenRouter;
     private final TransactionsRouter transactionsRouter;
 
+    private final SendRouter sendRouter;
+    private final MyAddressRouter myAddressRouter;
+    private final MutableLiveData<Wallet> defaultWallet = new MutableLiveData<>();
+
     TokensViewModel(
             FindDefaultNetworkInteract findDefaultNetworkInteract,
             FetchTokensInteract fetchTokensInteract,
             AddTokenRouter addTokenRouter,
             SendTokenRouter sendTokenRouter,
-            TransactionsRouter transactionsRouter) {
+            TransactionsRouter transactionsRouter,
+            SendRouter sendRouter,
+            MyAddressRouter myAddressRouter) {
         this.findDefaultNetworkInteract = findDefaultNetworkInteract;
         this.fetchTokensInteract = fetchTokensInteract;
         this.addTokenRouter = addTokenRouter;
         this.sendTokenRouter = sendTokenRouter;
         this.transactionsRouter = transactionsRouter;
+
+        this.sendRouter = sendRouter;
+        this.myAddressRouter = myAddressRouter;
     }
 
     public void prepare() {
@@ -92,5 +103,13 @@ public class TokensViewModel extends BaseViewModel {
 
     public void showTransactions(Context context, boolean isClearStack) {
         transactionsRouter.open(context, isClearStack);
+    }
+
+    public void showSend(Context context) {
+        sendRouter.open(context);
+    }
+
+    public void showMyAddress(Context context) {
+        myAddressRouter.open(context, defaultWallet.getValue());
     }
 }

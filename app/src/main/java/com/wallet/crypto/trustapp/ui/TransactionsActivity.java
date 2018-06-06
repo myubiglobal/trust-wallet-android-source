@@ -166,6 +166,10 @@ public class TransactionsActivity extends BaseNavigationActivity implements View
                 viewModel.showSend(this);
                 return true;
             }
+            case R.id.action_my_transactions: {
+                viewModel.fetchTransactions();
+                return true;
+            }
         }
         return false;
     }

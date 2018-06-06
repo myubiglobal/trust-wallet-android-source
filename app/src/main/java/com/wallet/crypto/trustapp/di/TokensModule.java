@@ -5,6 +5,8 @@ import com.wallet.crypto.trustapp.interact.FindDefaultNetworkInteract;
 import com.wallet.crypto.trustapp.repository.EthereumNetworkRepositoryType;
 import com.wallet.crypto.trustapp.repository.TokenRepositoryType;
 import com.wallet.crypto.trustapp.router.AddTokenRouter;
+import com.wallet.crypto.trustapp.router.MyAddressRouter;
+import com.wallet.crypto.trustapp.router.SendRouter;
 import com.wallet.crypto.trustapp.router.SendTokenRouter;
 import com.wallet.crypto.trustapp.router.TransactionsRouter;
 import com.wallet.crypto.trustapp.viewmodel.TokensViewModelFactory;
@@ -21,13 +23,17 @@ class TokensModule {
             FetchTokensInteract fetchTokensInteract,
             AddTokenRouter addTokenRouter,
             SendTokenRouter sendTokenRouter,
-            TransactionsRouter transactionsRouter) {
+            TransactionsRouter transactionsRouter,
+            SendRouter sendRouter,
+            MyAddressRouter myAddressRouter) {
         return new TokensViewModelFactory(
                 findDefaultNetworkInteract,
                 fetchTokensInteract,
                 addTokenRouter,
                 sendTokenRouter,
-                transactionsRouter);
+                transactionsRouter,
+                sendRouter,
+                myAddressRouter);
     }
 
     @Provides
@@ -54,5 +60,13 @@ class TokensModule {
     @Provides
     TransactionsRouter provideTransactionsRouter() {
         return new TransactionsRouter();
+    }
+
+    @Provides
+    SendRouter provideSendRouter() { return new SendRouter(); }
+
+    @Provides
+    MyAddressRouter provideMyAddressRouter() {
+        return new MyAddressRouter();
     }
 }

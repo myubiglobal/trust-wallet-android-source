@@ -76,7 +76,8 @@ public class TokensActivity extends BaseActivity implements View.OnClickListener
         switch (item.getItemId()) {
             case R.id.action_add: {
                 viewModel.showAddToken(this);
-            } break;
+            }
+            break;
             case android.R.id.home: {
                 viewModel.showTransactions(this, true);
             }
@@ -117,7 +118,8 @@ public class TokensActivity extends BaseActivity implements View.OnClickListener
         switch (view.getId()) {
             case R.id.try_again: {
                 viewModel.fetchTokens();
-            } break;
+            }
+            break;
         }
     }
 }

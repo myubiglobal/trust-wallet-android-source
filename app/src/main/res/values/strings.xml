@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Trust</string>
+    <string name="app_name">MYUBI</string>
     <string name="balance">Balance</string>
     <string name="title_send">Send</string>
     <string name="title_request">My Address</string>
@@ -50,7 +50,7 @@
     <string name="network_label">Network</string>
     <string name="app_intro">Intro</string>
 
-    <string name="title_trust">Trust</string>
+    <string name="title_trust">MYUBI</string>
     <string name="low_storage_error">low storage error</string>
     <string name="no_camera_permission">camera permission not given</string>
     <string name="ok">Ok</string>
@@ -63,18 +63,18 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_delete_account">Are you sure you want to delete wallet?</string>
     <string name="no_transactions">No Transactions.\nSwipe down to refresh.</string>
-    <string name="twitter">Twitter</string>
-    <string name="telegram">Telegram Group</string>
+    <!--<string name="twitter">Twitter</string>-->
+    <!--<string name="telegram">Telegram Group</string>-->
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_community">Community</string>
-    <string name="title_opensource">Open source development</string>
-    <string name="title_source_code">Source code</string>
-    <string name="title_report_bug">Report a bug</string>
-    <string name="title_rate">Rate us on Play Store</string>
+    <!--<string name="title_community">Community</string>-->
+    <!--<string name="title_opensource">Open source development</string>-->
+    <!--<string name="title_source_code">Source code</string>-->
+    <!--<string name="title_report_bug">Report a bug</string>-->
+    <!--<string name="title_rate">Rate us on Play Store</string>-->
     <string name="title_support">Support</string>
-    <string name="title_donate">Donate</string>
+    <!--<string name="title_donate">Donate</string>-->
     <string name="account_already_imported">Wallet with this address already exists</string>
     <string name="message_delete_account">Permanently deleting wallet. Make sure that it has been exported and stored elsewhere.</string>
     <string name="error_import">Error importing keystore</string>
@@ -92,11 +92,12 @@
     <string name="label_new_password">New password</string>
     <string name="activity_title_backup">Backup: %s…</string>
     <string name="action_backup">Backup</string>
-    <string name="title_privacy_policy">Privacy Policy</string>
-    <string name="title_terms">Terms and Conditions</string>
+    <!--<string name="title_privacy_policy">Privacy Policy</string>-->
+    <!--<string name="title_terms">Terms and Conditions</string>-->
     <string name="title_version">Version</string>
     <string name="title_activity_token_list">Tokens</string>
     <string name="title_tokens">My Tokens</string>
+    <string name="title_transactions">Transactions</string>
     <string name="prompt_private_key">Private key</string>
     <string name="error_import_private_key">Error importing private key</string>
     <string name="message_importing_private_key">Importing private key. One moment.</string>
@@ -229,5 +230,5 @@
     <string name="title_send_settings">Advanced</string>
     <string name="title_activity_barcode">Barcode Scan</string>
     <string name="error_add_token">Could not add token.</string>
-    <string name="facebook">Facebook</string>
+    <!--<string name="facebook">Facebook</string>-->
 </resources>
