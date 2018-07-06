@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.wallet.crypto.trustapp.R;
 
@@ -76,9 +75,9 @@ public class AddWalletView extends FrameLayout implements View.OnClickListener {
 	private static class IntroPagerAdapter extends PagerAdapter {
         private int[] titles = new int[] {
                 R.string.intro_title_first_page,
-                R.string.welcome_erc20_label_title,
-                R.string.intro_title_second_page,
-                R.string.intro_title_third_page,
+                //R.string.welcome_erc20_label_title,
+                //R.string.intro_title_second_page,
+                //R.string.intro_title_third_page,
         };
         private int[] messages = new int[] {
                 R.string.intro_message_first_page,
@@ -98,8 +97,8 @@ public class AddWalletView extends FrameLayout implements View.OnClickListener {
         public Object instantiateItem(@NonNull ViewGroup container, int position) {
             View view = LayoutInflater.from(container.getContext())
                     .inflate(R.layout.layout_page_intro, container, false);
-            ((TextView) view.findViewById(R.id.title)).setText(titles[position]);
-            ((TextView) view.findViewById(R.id.message)).setText(messages[position]);
+            //((TextView) view.findViewById(R.id.title)).setText(titles[position]);
+            //((TextView) view.findViewById(R.id.message)).setText(messages[position]);
             ((ImageView) view.findViewById(R.id.img)).setImageResource(images[position]);
             container.addView(view);
             return view;
